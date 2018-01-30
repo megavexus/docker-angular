@@ -11,9 +11,9 @@ services:
         - no_proxy
         - APP_NAME
     volumes:
-      - ${PATH_SRC}:/app/src
+      - ./${APP_NAME}/${PATH_SRC}:/app/src
       - ${PATH_BUILD}:/app/dist
-      - ${PATH_E2E}:/app/e2e
+      - ./${APP_NAME}/${PATH_E2E}:/app/e2e
     ports:
       - ${SERVE_PORT}:4200
 
