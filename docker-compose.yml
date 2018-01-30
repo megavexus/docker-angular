@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  angular:
+    hostname: angular
+    build:
+      context: .
+      args:
+        - http_proxy
+        - https_proxy
+        - no_proxy
+        - APP_NAME
+    volumes:
+      - ${PATH_SRC}:/app/src
+      - ${PATH_BUILD}:/app/dist
+      - ${PATH_E2E}:/app/e2e
+    ports:
+      - ${SERVE_PORT}:4200
+

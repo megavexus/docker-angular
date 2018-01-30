@@ -1,0 +1,5 @@
+app/.git
+app/.vcode
+app/node_modules
+app/dist
+app/.gitignore
