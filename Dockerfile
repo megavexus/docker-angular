@@ -1,10 +1,10 @@
 FROM node:9.4-alpine
 MAINTAINER Javier Gutierrez
 
-ARG APP_NAME
-
 # Install npm
-RUN npm install -g @angular/cli && npm clean cache
+RUN npm install -g @angular/cli
+
+ARG APP_NAME
 
 # Create de working dir
 RUN mkdir -p /app
